@@ -1,0 +1,137 @@
+body {
+
+    background-image: url('blossoms-3778265_1920.jpg');
+    background-repeat: no-repeat;
+    height: 10%;
+}
+
+.todo-container {
+    padding-bottom: 20px;
+    background-color: white;
+    height: 580px;
+    width: 400px;
+    display: block;
+    margin: 100px auto;
+    border-radius: 22px;
+    box-shadow: 0 4px 8px 0 rgba(174, 105, 105, 0.2), 0 6px 20px 0 rgba(174, 105, 105, 0.2);
+
+    /* box-shadow: 0 52px 52px rgba(174, 105, 105, 0.2); */
+
+}
+
+.to-do-title {
+    font-size: 40px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 22px 22px 0 0;
+    background-color: #373537;
+    color: white;
+}
+
+.list-item {
+    padding: 10px;
+    margin: 15px 10px;
+    border: 1px solid rgb(51, 47, 49);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    transition-duration: 0.4s;
+    background-color: rgb(58, 60, 62);
+
+}
+
+.list-item:hover {
+    background-color: rgb(50, 48, 49);
+    color: white;
+}
+
+.add-btn{
+    cursor: pointer;
+}
+
+.input{
+    border: 2px solid rgb(54, 54, 59);
+    border-radius: 22px;
+}
+/* 
+import React, { useEffect, useState } from 'react'
+ import "./Home.css"
+  import imgadd from "./button.png" 
+  import TaskCard from '../../component/TaskCard/TaskCard';
+
+  function Home() 
+  { const [tasks, setTasks] = useState([]); 
+    const [newtask , setNewtask] = useState('');
+     const [error , setError] = useState(''); 
+     const addTask = () => { 
+        if (newtask === '')
+        { setError('Please enter a task!!');
+             return 
+            } else if(newtask.length < 5 ){
+                 setError('Task should be at least 5 characters long!') 
+                } else{
+                     setError("") 
+                    } 
+                    const newtaskss = [newtask, ...tasks] 
+                    saveTasksToLocalStorage(newtaskss) 
+                    setTasks([ newtaskss]); setNewtask('') 
+                } const saveTasksToLocalStorage = (tasksToSave) => {
+                     localStorage.setItem('tasks',JSON.stringify(tasksToSave)) 
+                    }
+                     const deleteTask = (index) => { 
+                        const newtaskss = tasks;
+                         newtaskss.splice(index,1);
+                          setTasks([...newtaskss]); 
+                          saveTasksToLocalStorage(newtaskss) }
+                           // useEffect (()=>{ 
+                            // if (tasks.length ===0 ){ 
+                                // return
+                                 // }
+                                  //
+                            saveTasksToLocalStorage(tasks); 
+                            // } ,[tasks]) 
+                            
+                            useEffect(()=>{ 
+                                const tasks = localStorage.getItem('tasks'); 
+                                if (tasks){
+                                     setTasks(JSON.parse(tasks)); 
+                                } 
+                            },[]) 
+                            
+                            return ( 
+                                <div> <div class="todo-container ">
+                                 <div class="to-do-title"> ToDo App </div> 
+                                 <div> 
+                                 <input 
+                                 type='text' 
+                                 placeholder='Add a new task' 
+                                 className='p-2 m-3 w-75 input' 
+                                 value={newtask} 
+                                 onChange={(e)=>{
+                                     setNewtask(e.target.value)
+                                     }} />
+                                     
+                                     <img src={imgadd} height={40} className='add-btn' alt='add' 
+                                     onClick={addTask} /> 
+                                     
+                                     </div> 
+                                     
+                                     <p className='text-danger text-center'>{error}</p>
+                                     
+                                     <div className='d-flex flex-column overflow-y-scroll h-75 '> 
+                                     { 
+                                        tasks.map((task, i) => {
+                                             return ( 
+                                                <TaskCard 
+                                                task={task}
+                                                 key={i} 
+                                                 del={deleteTask}
+                                                  index={i}/> 
+                                                  ) })
+                                                 } </div>
+                                                 
+                                                 </div> 
+                                                 </div> ) }
+
+                                                 
+ export default Home */
